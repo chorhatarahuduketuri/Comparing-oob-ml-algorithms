@@ -49,6 +49,7 @@ Ratio data is continuous numberical data that describes the difference between t
 Different types of data allow for different statistical operations. The following table (a combination of three different tables from pages that can be found in my references section, as well as a data visualisation guide from kaggle), displays very useful and practical information about analyses of different types of data, that I will include as a rough summary of useful things to keep in mind: 
 
 |Statistical operation or analytical technique|Nominal|Ordinal|Continuous Interval|Continuous Ratio|
+|---|---|---|---|---|
 |Equality/Inequality|X|X|X|X|
 |Greater than/Less than/Ordering|-|X|X|X|
 |Addition/Subtraction|-|-|X|X|
