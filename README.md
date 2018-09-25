@@ -74,7 +74,31 @@ Different types of data allow for different statistical operations. The followin
 The only further reading I suggest is the following short (and extremely interesting) wikipedia page: https://en.wikipedia.org/wiki/Level_of_measurement, though there are further references at the end of this README. 
 
 
-    
+## Types of dataset
+There is no set list of types of datasets, but there are various descriptors of datasets and descriptors of features in datasets that are of use. 
+
+### Descriptors of datasets
+
+#### Density and Sparsity
+A particularly important thing to know about a dataset you intend to use is whether it is dense or sparse. A dense dataset has most or all of the data points filled with meaningful data, i.e. each row has data for most or all of the features. A sparse dataset has few meaningful data points, and most are either set to 0 or the equivalent of 0 for that feature if it is non-numeric. While both are useful, dense datasets contain a lot more information than sparse datasets of the same size. 
+
+#### Balance
+Balance is a description of the ratio of instances of each predictor variable in a dataset. If there are significantly more of one class than another, then the dataset is said to be unbalanced. For example, if there are 100 pictures in a dataset from which to learn the difference between cats and dogs - and only 10 of them are dogs while the other 90 are cats - then the dataset is unbalanced. Usually any ratio between classes greater than or equal to 2:1 could definitely be considered unbalanced. This introduces problems around it's usage for learning what the difference is between the two different classes. 
+
+There are several different approaches to solving this problem, the laziest of which is to use a more sophisticated evaluation metric (e.g. precision, recall, and of course F1 score). The more effortful involve adjusting algorithms to give more weight to what it learns from the less frequent class. These more effortful solutions are outside the scope of this work, so different evaluation metrics will be considered. 
+
+
+### Descriptors of dataset features
+
+#### Skewness
+Skewness is how similar the tails of a feature are. If it has low skew, then the tails are of the same size. If it is *skewed right*, or has *positive skew*, then the tail is longer on the right hand side of the graph/positive side of the feature. If it is *skewed left*, or has *negative skew*, then the tail is longer on the left hand side of the graph/positive side of the feature. 
+
+#### Kurtosis
+Kurtosis is a measure of how much of the data lies close to the centre of the distribution, and how much lies away from the centre. Higher kurtosis (>3), called *leptokurtic*, indicates more of the data lies away from the centre of the distribution, creating a peaked shape with long tails out to the sides. Lower kurtosis (<3), called *platykurtic*, indicates more of the data is closer to the centre of the distribution, creating a rounder shape with shorter tails. 
+
+The incredibly simplified response to particularly high/low skew or kurtosis is to mean normalise the data. The reason for this is that most ML algorithms work better on normally distributed data, and very high/low skew/kurtosis stretches data away from the normal distribution shape. Mean normalisation, in addition to it's intended purpose, works to pull some data back towards a more standard normal distribution shape. More advanced responses will not be explored in this work. 
+
+
 ### References
 - https://en.wikipedia.org/wiki/Statistical_data_type
 - https://en.wikipedia.org/wiki/Real_number
@@ -83,3 +107,5 @@ The only further reading I suggest is the following short (and extremely interes
 - http://blog.minitab.com/blog/understanding-statistics/understanding-qualitative-quantitative-attribute-discrete-and-continuous-data-types
 - https://towardsdatascience.com/data-types-in-statistics-347e152e8bee
 - https://www.kaggle.com/learn/data-visualisation
+- https://www.ibm.com/support/knowledgecenter/en/SSRL5J_1.0.1/com.ibm.swg.ba.cognos.ug_cr_rptstd.10.1.1.doc/c_id_obj_desc_tables.html
+- https://en.wikipedia.org/wiki/Kurtosis
