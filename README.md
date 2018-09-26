@@ -99,6 +99,26 @@ Kurtosis is a measure of how much of the data lies close to the centre of the di
 The incredibly simplified response to particularly high/low skew or kurtosis is to mean normalise the data. The reason for this is that most ML algorithms work better on normally distributed data, and very high/low skew/kurtosis stretches data away from the normal distribution shape. Mean normalisation, in addition to it's intended purpose, works to pull some data back towards a more standard normal distribution shape. More advanced responses will not be explored in this work. 
 
 
+## Datasets to be analysed
+
+- The Wine Quality dataset again, this time for a different purpose: http://archive.ics.uci.edu/ml/datasets/Wine+Quality?ref=datanews.io. 
+- Continuing my interest in wine, the Wine Data Set https://archive.ics.uci.edu/ml/datasets/wine. This is a good example of a dataset with a high feature:instance ratio (~1:14), and has only 178 instances. 
+- Yet another wine dataset, Wine Reviews https://www.kaggle.com/zynicide/wine-reviews. This is a larger dataset (~25,000 instances, and 11-14 features.) 
+- The Iris Data Set, https://archive.ics.uci.edu/ml/datasets/iris. 
+- The Breast Cancer Wisconsin (Original) Dataset, https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29. 
+
+## Models to be used
+
+- Logistic/Linear Regression (as appropriate)
+- Random Forest
+- K Nearest Neighbours 
+- Multi Layer Perceptron 
+- Support Vector Machine
+- Decision Tree
+
+## Format
+There will be a subfolder for each dataset, with it's own jupyter notebook(s) and README.md writeup. All models will be applied to each dataset, except where it makes no sense to do so, e.g. I will not attempt to apply a decision tree model to classify image data, and I will not use a classification algorithm to predict continuous target variables. 
+
 ### References
 - https://en.wikipedia.org/wiki/Statistical_data_type
 - https://en.wikipedia.org/wiki/Real_number
