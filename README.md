@@ -112,7 +112,7 @@ The incredibly simplified response to particularly high/low skew or kurtosis is 
 - Logistic/Linear Regression (as appropriate)
 - Random Forest
 - K Nearest Neighbours 
-- Multi Layer Perceptron 
+- Multi-layer Perceptron 
 - Support Vector Machine
 - Decision Tree
 - Naive Bayes
