@@ -115,6 +115,7 @@ The incredibly simplified response to particularly high/low skew or kurtosis is 
 - Multi Layer Perceptron 
 - Support Vector Machine
 - Decision Tree
+- Naive Bayes
 
 ## Format
 There will be a subfolder for each dataset, with it's own jupyter notebook(s) and README.md writeup. All models will be applied to each dataset, except where it makes no sense to do so, e.g. I will not attempt to apply a decision tree model to classify image data, and I will not use a classification algorithm to predict continuous target variables. 
